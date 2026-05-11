@@ -219,10 +219,24 @@ def main():
             
             if show_ui and warper.mode == "IMAGE":
                 y_base = SCREEN_RES[1] - 220
-                # 確保每一行結尾都有正確的右括號 )
                 text_renderer.draw(f"CALIBRATION MODE", 40, y_base)
                 text_renderer.draw(f"[P] Start Video Playback", 40, y_base + 35)
                 text_renderer.draw(f"[S] Save Config", 40, y_base + 70)
                 text_renderer.draw(f"[Y] Symmetry: {'ON' if warper.symmetry else 'OFF'}", 40, y_base + 105)
                 text_renderer.draw(f"[H] Hide UI", 40, y_base + 140)
                 text_renderer.draw(f"[Esc] Exit", 40, y_base + 175)
+
+            pygame.display.flip()
+            clock.tick(30)
+            
+    except Exception:
+        print("\n!!! 程式發生嚴重錯誤 !!!")
+        traceback.print_exc()
+    finally:
+        if 'warper' in locals() and warper.cap: warper.cap.release()
+        pygame.quit()
+        print("--- 程式結束 (按任意鍵或關閉視窗) ---")
+        input() # 讓 DOS 視窗留住不要立即關閉
+
+if __name__ == "__main__":
+    main()
