@@ -219,4 +219,10 @@ def main():
             
             if show_ui and warper.mode == "IMAGE":
                 y_base = SCREEN_RES[1] - 220
-                text_renderer.draw(f"CALIBRATION MODE", 4
+                # 確保每一行結尾都有正確的右括號 )
+                text_renderer.draw(f"CALIBRATION MODE", 40, y_base)
+                text_renderer.draw(f"[P] Start Video Playback", 40, y_base + 35)
+                text_renderer.draw(f"[S] Save Config", 40, y_base + 70)
+                text_renderer.draw(f"[Y] Symmetry: {'ON' if warper.symmetry else 'OFF'}", 40, y_base + 105)
+                text_renderer.draw(f"[H] Hide UI", 40, y_base + 140)
+                text_renderer.draw(f"[Esc] Exit", 40, y_base + 175)
