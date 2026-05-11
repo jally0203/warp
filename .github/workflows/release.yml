@@ -2,9 +2,15 @@ name: Build and Release Windows Executable
 
 on:
   push:
+    branches:
+      - main
     tags:
       - 'v*'
   workflow_dispatch:
+
+env:
+  # 提前啟用 Node.js 24 以符合 GitHub 2026 年的新規範
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
