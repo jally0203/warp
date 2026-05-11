@@ -36,9 +36,10 @@ jobs:
       - name: Build with PyInstaller
         run: |
           # Bundling warp.py. Note: video.mp4 might need to be in the same folder as the exe.
-          pyinstaller --onefile --windowed --name "tesp1" test_step1.py
-          pyinstaller --onefile --windowed --name "tesp2" test_step2.py
-          pyinstaller --onefile --windowed --name "tesp3" test_step3.py
+          pyinstaller --onefile --name "test1" test_step1.py
+          pyinstaller --onefile --name "test2" test_step2.py
+          pyinstaller --onefile --name "test3" test_step3.py
+          pyinstaller --onefile --name "test4" test_step4.py
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
