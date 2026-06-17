@@ -1,7 +1,8 @@
 [linux]
-video-notext-v6.py  初版，但在副螢幕顯示異常
-video_final.py  鎖定在副螢幕播放，120下正常播放，若只有單螢幕可能要修改 (已在NUC驗證可在副螢幕輸出120)
+v1.0.4 - video-notext-v6.py  初版，但在副螢幕顯示異常
+v1.1.1 - video_final.py  鎖定在副螢幕播放，120下正常播放，若只有單螢幕可能要修改 (已在NUC驗證可在副螢幕輸出120)
 
 
 [windows]
-wrap_windows.py 測試過此版本可在window下正常執行，對應v6版本
+v1.0.4 - wrap_windows.py 測試過此版本可在window下正常執行，對應v1.0.4
+v1.1.1 - wrap_final.py window版本
